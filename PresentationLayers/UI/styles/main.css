@@ -1,0 +1,362 @@
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+body {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.full-height {
+    min-height: 100%;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+    /* Make the masthead heading the same height as the navigation */
+    .header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+    .marketing p + h4 {
+        margin-top: 28px;
+    }
+
+.header-content {
+    position: relative;
+    width: 100%;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.map-Container {
+    background-image: url("../images/background.png");
+    z-index: -1;
+    position: absolute;
+    min-height: calc(100% - 70px);
+    min-width: 100%;
+}
+
+.hover-docList {
+    font-size: 11px;
+    font-weight: normal;
+    overflow: auto;
+}
+
+.hover-docList a {
+    color: #24ffa1;
+}
+
+
+
+div.searchPanel {
+    padding: 10px;
+    background-color: rgba(8, 47, 102, .7);
+    align-content: stretch;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+
+    .right-inner-addon input {
+        padding-right: 30px;
+    }
+
+    .right-inner-addon i {
+        position: absolute;
+        right: 0px;
+        padding: 10px 12px;
+        pointer-events: none;
+    }
+
+.selectedListItem {
+    color: #24ffa1;
+}
+
+li a:hover {
+    color: #FC8D59;
+    fill-opacity: 0.85;
+    cursor:pointer;
+}
+
+ul li.listItem {
+    float: right;
+    clear: right;
+    list-style-type: none;
+    color: #2279fa;
+}
+
+
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+    .vertical-align > [class^="col-"],
+    .vertical-align > [class*=" col-"] {
+        display: flex;
+        align-items: center;
+    }
+
+a {
+    display: block;
+}
+
+#append1 ul {
+    margin: 2px;
+    padding: 0px;
+}
+
+    #append1 ul li {
+        margin: 2px;
+        padding: 0px;
+        list-style: none;
+    }
+
+        #append1 ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            #append1 ul li a:hover {
+                text-decoration: underline;
+            }
+
+.headerback {
+    float: right;
+    justify-content: flex-end;
+    align-self: center;
+    height: 70px;
+}
+
+.borderless tbody tr td {
+    border: none;
+}
+
+.logo {
+    height: 90px;
+    width: 80px;
+    border-bottom-left-radius:20%;
+    border-bottom-right-radius:20%;
+    position: absolute;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+
+.backlink {
+    float: right;
+    justify-content: flex-end;
+    align-self: center;
+    height: 70px;
+}
+
+.menuicon {
+    padding-right: 0px;
+    float: right;
+}
+
+
+
+
+.dropdown-item {
+    color: white;
+}
+
+
+.valign-block {
+}
+ 
+.valign-blockblock:before {
+  content: '\200B';
+/*   content: '';
+  margin-left: -0.25em; */
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+ }
+ 
+.valign-centered {
+  display: inline-block;
+  vertical-align: middle;
+ }
+
+.animate-refresh-icon {
+    animation-name: rotateThis;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation: rotateThis 0.5s infinite linear;    
+    -webkit-animation: rotateThis 0.5s infinite linear;    
+}
+/* IE*/
+input[type="search"]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type="search"]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rotateThis {
+  from { transform: scale( 1 ) rotate( 0deg );   }
+  to   { transform: scale( 1 ) rotate( 360deg ); }
+}
+
+@keyframes rotateThis {
+  from { transform: scale( 1 ) rotate( 0deg );   }
+  to   { transform: scale( 1 ) rotate( 360deg ); }
+}
+/*END of fixing header content issues in IE10*/
+
+
+/*/* Responsive: Portrait tablets and up */
+/**/ @ /*media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }*/
+
+/* Remove the padding we set earlier */
+/*.header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }*/
+/* Space out the masthead */
+/*.header {
+    margin-bottom: 30px;
+  }*/
+/* Remove the bottom border on the jumbotron for visual effect */
+/*.jumbotron {
+    border-bottom: 0;
+  }*/
+/*}*/
+
+
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutUp {
+    from    { transform:translateY(0); }
+    to      { transform: translateY(100%); }
+}
+
+ /*.ng-enter           { animation: slideInUp 12.5s both ease-in; z-index: 8888; } */
+/*    .ng-leave           { animation: slideOutUp 0.5s both ease-in; z-index: 9999; }*/
+
+
+
+.pagination.xs-pagination {
+        margin: -10px 0;
+        
+}
+
+
+
+.pagination.xs-pagination > li > a,
+.pagination.xs-pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 3px 6px;
+  margin-left: -1px;
+  line-height: 1;
+  background-color: rgba(8, 47, 102, .7);
+  border: 1px solid;
+}
+.pagination.xs-pagination > li:first-child > a,
+.pagination.xs-pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.pagination.xs-pagination > li:last-child > a,
+.pagination.xs-pagination > li:last-child > span {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.pagination.xs-pagination > .active > a,
+.pagination.xs-pagination > .active > span,
+.pagination.xs-pagination > .active > a:hover,
+.pagination.xs-pagination > .active > span:hover,
+.pagination.xs-pagination > .active > a:focus,
+.pagination.xs-pagination > .active > span:focus {
+  z-index: 3;
+  color: #24ffa1;
+  cursor: default;
+  background-color: #2279fa;
+  border-color: #2279fa;
+}
+
+.removeIcon {
+    font-size: 12px;
+    font-weight: normal;
+    padding-right: 6px;
+}
+
+.removeIcon:hover {
+    border-radius:50%;
+    background: red;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.datamaps-legend dt, .datamaps-legend dd {
+        
+    }
+    .datamaps-legend {
+        color: rgb(2, 241, 229);
+    }
+
+

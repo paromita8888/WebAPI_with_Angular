@@ -1,0 +1,63 @@
+﻿<div>
+    <div class="hoverinfo">
+        <strong>{{selectedCountry}}</strong>
+        <span style="float:right"><i class="glyphicon glyphicon-remove removeIcon" ng-click="selectCounty(selectedCountry)"></i></span>
+        <div class="hover-docList searchPanel">
+            <div ng-show="popupVM.IsEdelCountry">
+                <div class="right-inner-addon" ng-show="documents.length > popupVM.pageSize">
+                    <i class="glyphicon glyphicon-search" style="color:#0c4c94;"></i>
+                    <input type="search"
+                           class="form-control"
+                           placeholder="Search....."
+                           style="background: transparent; border: none; color:#24ffa1;"
+                           ng-model="docSearchText" />
+                </div>
+
+                <table class="table table-condensed borderless">
+                    <thead>
+                        <tr>
+                            <th>Document Title</th>
+                            <th style="white-space:nowrap">Modified On</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-hide="popupVM.docAvailable">
+                            <td colspan="3">
+                                <!--#schaha: hacks - absolute positioning-->
+                                <div style="color:#24ffa1">
+                                    <span class="glyphicon glyphicon-refresh animate-refresh-icon"></span>
+                                    <span>Loading document list</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="doc in documents | filter: docSearchText| limitTo: popupVM.pageSize : (popupVM.currentPage - 1) * popupVM.pageSize">
+                            <td><a href="{{doc.documentUrl}}?Web=1" target="_blank" class="menuli">{{doc.documentTitle}}</a></td>
+                            <td>{{doc.modifiedDate | date}}</td>
+                            <td style="text-align:center"><a href="{{doc.documentUrl}}" target="_blank" class="menuli" download="{{doc.documentTitle}}"><i class="glyphicon glyphicon-download-alt" /></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div ng-show="documents.length > popupVM.pageSize">
+                    <span>Page: {{popupVM.currentPage}} of {{popupVM.numPages}}</span>
+
+                    <div style="float: right;">
+                        <uib-pagination direction-links="true" total-items="documents.length" ng-model="popupVM.currentPage"
+                                        class="xs-pagination" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page="popupVM.pageSize" num-pages="popupVM.numPages" max-size="4"></uib-pagination>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-hide="popupVM.IsEdelCountry" style="font-size:small;opacity:0.6;">
+                <span style="color:red;">
+                    <i class="glyphicon  glyphicon-alert"></i>
+                    <span style="padding-left: 10px;">No Document found.</span>
+                </span>
+            </div>
+
+        </div>
+        
+    </div>
+</div>

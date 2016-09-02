@@ -1,0 +1,52 @@
+﻿<div style="padding-left: 15px; padding-right: 15px;">
+    <h2 style="color: rgb(41, 118, 246)">{{pageHeader}}</h2>
+
+    <div style="color: rgb(41, 118, 246);">
+        <div ng-show="documentStatus == 'Fetching'">
+            <span class="glyphicon glyphicon-refresh animate-refresh-icon"></span>
+            <span>Loading documents information....</span>
+        </div>
+        <div ng-show="documentStatus == 'No Content'">
+            <div class="alert alert-info" role="alert">
+                <span>There are no content present for this selection. Please contant Edge Admin.</span>
+            </div>
+        </div>
+
+        <div ng-show="documentStatus == 'Error'">
+            <div class="alert alert-info" role="alert">
+                <span>An error occured while fetching content. Please contact <a href="http://helpdesk.djeholdings.com" target="_blank" style="display:inline;">IT support</a>.</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div ng-show="documentStatus == 'Available'">
+        <input type="search" class="form-control" placeholder="Search for..." ng-model="search.documentTitle" style="width: 32%; float: right" />
+        <table class="table table-hover" style="padding-top: 30px;">
+            <thead style="color: rgb(0, 30, 66)">
+                <tr>
+                    <th>#</th>
+                    <th>Document Title</th>
+                    <th style="white-space: nowrap">Last Modified On</th>
+                    <th style="white-space: nowrap; text-align: center">Download</th>
+                </tr>
+            </thead>
+            <tbody style="color: rgb(21, 41, 57)">
+                <tr ng-repeat="doc in (filtereddocuments =  (documents | filter:search:strict)) | limitTo: pageSize : (currentPage - 1) * pageSize">
+                    <td>{{((currentPage - 1) * pageSize) + $index + 1 }}</td>
+                    <td><a href="{{doc.documentUrl}}?Web=1" target="_blank" class="menuli">{{doc.documentTitle}}</a></td>
+                    <td>{{doc.modifiedDate | date}}</td>
+                    <td style="text-align: center"><a href="{{doc.documentUrl}}" target="_blank" class="menuli" download=""><i class="glyphicon glyphicon-download-alt" /></a></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div ng-show="filtereddocuments.length > pageSize" style="display:inline; vertical-align:middle;">
+            <span>Page : {{currentPage}} of {{numPages}}</span>
+            <uib-pagination direction-links="true" total-items="filtereddocuments.length" ng-model="currentPage"
+                                items-per-page="pageSize" num-pages="numPages" style="float:right;margin-top:-10px;"></uib-pagination>
+        </div>
+    </div>
+
+</div>

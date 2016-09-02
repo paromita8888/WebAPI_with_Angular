@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F30B616-251B-4017-AE7C-C23917C8AFED}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PresentationLayers</RootNamespace>
+    <AssemblyName>PresentationLayers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\TechVantage2016\TechVantageService\TechVantageService\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\TechVantage2016\TechVantageService\TechVantageService\bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="UI\images\background.png" />
+    <Content Include="UI\images\EdgeLogo.png" />
+    <Content Include="UI\images\menuicon.png" />
+    <Content Include="UI\Libs\angular-animate\angular-animate.min.js" />
+    <Content Include="UI\Libs\angular-datamaps\angular-datamaps.js" />
+    <Content Include="UI\Libs\angular-datamaps\angular-datamaps.min.js" />
+    <Content Include="UI\Libs\angular-route\angular-route.js" />
+    <Content Include="UI\Libs\angular-route\angular-route.min.js" />
+    <Content Include="UI\Libs\angular-route\index.js" />
+    <Content Include="UI\Libs\Angular-UI\ui-bootstrap-custom-1.3.1.min.js" />
+    <Content Include="UI\Libs\Angular-UI\ui-bootstrap-custom-tpls-1.3.1.min.js" />
+    <Content Include="UI\Libs\angular\angular-csp.css" />
+    <Content Include="UI\Libs\angular\angular.js" />
+    <Content Include="UI\Libs\angular\angular.min.js" />
+    <Content Include="UI\Libs\angular\index.js" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="UI\Libs\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="UI\Libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="UI\Libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="UI\Libs\bootstrap\dist\js\npm.js" />
+    <Content Include="UI\Libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="UI\Libs\bootstrap\Gruntfile.js" />
+    <Content Include="UI\Libs\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="UI\Libs\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="UI\Libs\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="UI\Libs\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="UI\Libs\bootstrap\js\affix.js" />
+    <Content Include="UI\Libs\bootstrap\js\alert.js" />
+    <Content Include="UI\Libs\bootstrap\js\button.js" />
+    <Content Include="UI\Libs\bootstrap\js\carousel.js" />
+    <Content Include="UI\Libs\bootstrap\js\collapse.js" />
+    <Content Include="UI\Libs\bootstrap\js\dropdown.js" />
+    <Content Include="UI\Libs\bootstrap\js\modal.js" />
+    <Content Include="UI\Libs\bootstrap\js\popover.js" />
+    <Content Include="UI\Libs\bootstrap\js\scrollspy.js" />
+    <Content Include="UI\Libs\bootstrap\js\tab.js" />
+    <Content Include="UI\Libs\bootstrap\js\tooltip.js" />
+    <Content Include="UI\Libs\bootstrap\js\transition.js" />
+    <Content Include="UI\Libs\bootstrap\package.js" />
+    <Content Include="UI\Libs\bs-Table\bsTable.js" />
+    <Content Include="UI\Libs\D3\d3.js" />
+    <Content Include="UI\Libs\D3\d3.min.js" />
+    <Content Include="UI\Libs\datamaps\datamaps.all.js" />
+    <Content Include="UI\Libs\datamaps\datamaps.all.min.js" />
+    <Content Include="UI\Libs\jquery\jquery.js" />
+    <Content Include="UI\Libs\jquery\jquery.min.js" />
+    <Content Include="UI\Libs\topojson\topojson.js" />
+    <Content Include="UI\public\index.html" />
+    <Content Include="UI\scripts\app.js" />
+    <Content Include="UI\scripts\controllers\about.js" />
+    <Content Include="UI\scripts\controllers\docList.js" />
+    <Content Include="UI\scripts\controllers\main.js" />
+    <Content Include="UI\scripts\controllers\navBarController.js" />
+    <Content Include="UI\styles\main.css" />
+    <Content Include="UI\styles\mainmenu.css" />
+    <Content Include="UI\views\about.html" />
+    <Content Include="UI\views\docsList.html" />
+    <Content Include="UI\views\main.html" />
+    <Content Include="UI\views\popupTemplate.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLayer\CommonLayer.csproj">
+      <Project>{64d032da-9d19-4b12-b652-aa72418ce74b}</Project>
+      <Name>CommonLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALLayer\DALLayer.csproj">
+      <Project>{eb5e784d-c497-457e-83d5-110ee482539f}</Project>
+      <Name>DALLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\Libs\angular-route\.bower.json" />
+    <Content Include="UI\Libs\angular-route\angular-route.min.js.map" />
+    <Content Include="UI\Libs\angular-route\bower.json" />
+    <Content Include="UI\Libs\angular-route\package.json" />
+    <Content Include="UI\Libs\angular-route\README.md" />
+    <Content Include="UI\Libs\angular\.bower.json" />
+    <Content Include="UI\Libs\angular\angular.min.js.gzip" />
+    <Content Include="UI\Libs\angular\angular.min.js.map" />
+    <Content Include="UI\Libs\angular\bower.json" />
+    <Content Include="UI\Libs\angular\package.json" />
+    <Content Include="UI\Libs\angular\README.md" />
+    <Content Include="UI\Libs\bootstrap\.bower.json" />
+    <Content Include="UI\Libs\bootstrap\bower.json" />
+    <Content Include="UI\Libs\bootstrap\CHANGELOG.md" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="UI\Libs\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="UI\Libs\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="UI\Libs\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="UI\Libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="UI\Libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="UI\Libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="UI\Libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="UI\Libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="UI\Libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="UI\Libs\bootstrap\grunt\.jshintrc" />
+    <Content Include="UI\Libs\bootstrap\grunt\configBridge.json" />
+    <Content Include="UI\Libs\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="UI\Libs\bootstrap\js\.jscsrc" />
+    <Content Include="UI\Libs\bootstrap\js\.jshintrc" />
+    <Content Include="UI\Libs\bootstrap\less\.csscomb.json" />
+    <Content Include="UI\Libs\bootstrap\less\.csslintrc" />
+    <Content Include="UI\Libs\bootstrap\less\alerts.less" />
+    <Content Include="UI\Libs\bootstrap\less\badges.less" />
+    <Content Include="UI\Libs\bootstrap\less\bootstrap.less" />
+    <Content Include="UI\Libs\bootstrap\less\breadcrumbs.less" />
+    <Content Include="UI\Libs\bootstrap\less\button-groups.less" />
+    <Content Include="UI\Libs\bootstrap\less\buttons.less" />
+    <Content Include="UI\Libs\bootstrap\less\carousel.less" />
+    <Content Include="UI\Libs\bootstrap\less\close.less" />
+    <Content Include="UI\Libs\bootstrap\less\code.less" />
+    <Content Include="UI\Libs\bootstrap\less\component-animations.less" />
+    <Content Include="UI\Libs\bootstrap\less\dropdowns.less" />
+    <Content Include="UI\Libs\bootstrap\less\forms.less" />
+    <Content Include="UI\Libs\bootstrap\less\glyphicons.less" />
+    <Content Include="UI\Libs\bootstrap\less\grid.less" />
+    <Content Include="UI\Libs\bootstrap\less\input-groups.less" />
+    <Content Include="UI\Libs\bootstrap\less\jumbotron.less" />
+    <Content Include="UI\Libs\bootstrap\less\labels.less" />
+    <Content Include="UI\Libs\bootstrap\less\list-group.less" />
+    <Content Include="UI\Libs\bootstrap\less\media.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\alerts.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\buttons.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\center-block.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\forms.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\gradients.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\grid.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\image.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\labels.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\list-group.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\opacity.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\pagination.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\panels.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\resize.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\size.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\table-row.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="UI\Libs\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="UI\Libs\bootstrap\less\modals.less" />
+    <Content Include="UI\Libs\bootstrap\less\navbar.less" />
+    <Content Include="UI\Libs\bootstrap\less\navs.less" />
+    <Content Include="UI\Libs\bootstrap\less\normalize.less" />
+    <Content Include="UI\Libs\bootstrap\less\pager.less" />
+    <Content Include="UI\Libs\bootstrap\less\pagination.less" />
+    <Content Include="UI\Libs\bootstrap\less\panels.less" />
+    <Content Include="UI\Libs\bootstrap\less\popovers.less" />
+    <Content Include="UI\Libs\bootstrap\less\print.less" />
+    <Content Include="UI\Libs\bootstrap\less\progress-bars.less" />
+    <Content Include="UI\Libs\bootstrap\less\responsive-embed.less" />
+    <Content Include="UI\Libs\bootstrap\less\responsive-utilities.less" />
+    <Content Include="UI\Libs\bootstrap\less\scaffolding.less" />
+    <Content Include="UI\Libs\bootstrap\less\tables.less" />
+    <Content Include="UI\Libs\bootstrap\less\theme.less" />
+    <Content Include="UI\Libs\bootstrap\less\thumbnails.less" />
+    <Content Include="UI\Libs\bootstrap\less\tooltip.less" />
+    <Content Include="UI\Libs\bootstrap\less\type.less" />
+    <Content Include="UI\Libs\bootstrap\less\utilities.less" />
+    <Content Include="UI\Libs\bootstrap\less\variables.less" />
+    <Content Include="UI\Libs\bootstrap\less\wells.less" />
+    <Content Include="UI\Libs\bootstrap\LICENSE" />
+    <Content Include="UI\Libs\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="UI\Libs\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="UI\Libs\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="UI\Libs\bootstrap\package.json" />
+    <Content Include="UI\Libs\bootstrap\README.md" />
+    <Content Include="UI\Libs\topojson\.bower.json" />
+    <Content Include="UI\Libs\topojson\bower.json" />
+    <Content Include="UI\Libs\topojson\LICENSE" />
+    <Content Include="UI\Libs\topojson\README.md" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64052</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64052/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

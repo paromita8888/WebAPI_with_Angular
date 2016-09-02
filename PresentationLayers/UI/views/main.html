@@ -1,0 +1,49 @@
+<div id="mapContainer" class="map-Container">
+
+    <div style="padding-left:5%; padding-right:5%;">
+
+        
+        <div class="col-md-10">
+            <!--#schaha: hacks - absolute positioning-->
+            <div style="position:absolute; margin-left:50%; margin-top: 25px; color:#24ffa1" ng-hide="countriesInfoAvailable == 'Available'">
+                <div ng-show="countriesInfoAvailable == 'Fecthing'">
+                    <span class="glyphicon glyphicon-refresh animate-refresh-icon"></span>
+                    <span>Loading countries information....</span>
+                </div>
+                <div ng-show="countriesInfoAvailable == 'Error'" class="alert alert-danger" style="margin-left: -30%;">
+                    <span>An error occured. Please contact <a href="http://helpdesk.djeholdings.com" target="_blank" style="display:inline;color:red;">IT support</a>.</span>
+                </div>
+            </div>
+            <div style="padding-top:10%;">
+                <datamap map="mapObject" on-click="geoSelected" api="mapAPI">
+                </datamap>
+                
+            </div>
+           
+        </div>
+        <div class="col-md-2">
+            <div style="padding-top: 5%;">
+                <div class="searchPanel clearfix">
+
+                    <div class="right-inner-addon">
+                        <i class="glyphicon glyphicon-search" style="color:#0c4c94;"></i>
+                        <input type="search"
+                               class="form-control"
+                               placeholder="Search....."
+                               style="background: transparent; border: none; color:#24ffa1;"
+                               ng-model="searchText" />
+                    </div>
+
+                    <div style="padding-top: 10px;">
+                        <ul>
+                            <li ng-repeat="country in countries | filter: searchText | orderBy:name" class="listItem">
+                                <a ng-click="selectCounty(country)" ng-class="{selectedListItem: country.aplha3_Code == selectedCountryCode}">{{country.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+</div>
